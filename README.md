@@ -14,9 +14,11 @@
   <br>
 
 
- *click on**[Fork](https://github.com/pierrette444/Smith-MD/fork)**to properly deploy your bot*  <br>
+ *click on*[Fork](https://github.com/pierrette444/Smith-MD/fork)**to properly deploy your bot*  <br>
   
- **click here to be able to have the bot session* [Session-ID](https://replit.com/@murnoire/Zuk?v=1) <br>
+
+ *click here to be able to have the bot session*
+ [Session-ID](https://replit.com/@murnoire/Zuk?v=1) <br>
  
 
 ## Déploiement Method
@@ -27,7 +29,7 @@
 
   **Deploy on heroku** [**Deploy on heroku**](https://dashboard.heroku.com/new?template=https://github.com/pierrette444/Smith-MD) 
 
-##A BIG THANKS YOU TO⬇️⬇️⬇️
+## A BIG THANKS YOU TO⬇️⬇️⬇️
   
   [**➳ᴹᴿ᭄𝐃𝐞𝐧𝐳𝐨 𝐔𝐜𝐡𝐢𝐰𝐚 亗**](https://github.com/Denzo-MD)
 
