@@ -23,9 +23,26 @@
  [{✨**Session-ID✨**}](https://replit.com/@murnoire/Zuk?v=1) <br>
  
 
-## Déploiement Method
+## ```Déploiement Method```
 
-**déploye on heroku**
+<br>
+
+<h4 align="center"> Deploy on Repl.it
+</h4>
+
+<p align="center" >
+    <a href="https://repl.it/github/pierrette444/Smith-MD">
+    <img src="https://repl.it/badge/github/quiec/whatsasena" width="170px" alt="Deploy on REPLIT" >
+    </a>
+</p>
+
+<p align="center" >
+    <br>
+    __________________________
+    <br>
+</p>
+
+
 
   **Heroku account**  [**Create a heroku account**](https://id.heroku.com/login)
 
@@ -38,8 +55,8 @@
   
  
 
-## ```A BIG THANKS YOU TO```⬇️⬇️⬇️
+## ```✨A BIG THANKS YOU TO✨```⬇️⬇️⬇️
   
-  [**➳ᴹᴿ᭄𝐃𝐞𝐧𝐳𝐨 𝐔𝐜𝐡𝐢𝐰𝐚 亗**](https://github.com/Denzo-MD)
+  [✨**➳ᴹᴿ᭄𝐃𝐞𝐧𝐳𝐨 𝐔𝐜𝐡𝐢𝐰𝐚 亗**✨](https://github.com/Denzo-MD)
 
  
