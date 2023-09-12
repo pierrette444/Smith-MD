@@ -1,6 +1,20 @@
-<p align="center"><h1>Smith-MD </h1><br> </p>
+<p align="center">
+  <a href="" target="_blank">
+    <img alt="Forks" src="https://img.Denzo.io/github/forks/pierrette444/Smith-MD" />
+  </a>
+  
+ 
 
+</p>
+<p align="center"><img src="https://profile-counter.glitch.me/{excelottah6}/count.svg" alt="pierrette444 :: Visitor's Count" /></p>
+<p align="center">
+ <a href="https://chat.whatsapp.com/JFNXyoRTf4t6e9GTaM2Oe6" target="_blank">
+    <img alt="whatsapp Group" src="https://img.shields.io/badge/ Whatsapp Support Group -25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+  </a>
+</p>
+</details>
 
+<br>
 
 
 ![banner](Smith-MD.jpg)
