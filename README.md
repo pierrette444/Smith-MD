@@ -14,17 +14,19 @@
   <br>
 
 
- **[Fork](https://github.com/djalega8000/Zokou-2.0/fork)**  <br>
+ **[Fork](https://github.com/pierrette444/Smith-MD/fork)**  <br>
+  
   [Session-ID](https://replit.com/@murnoire/Zuk?v=1) <br>
   
   [Replit](https://replit.com/@murnoire/Zuk?v=1)
 3. 
 
-## Déploiement
-- **déploiement sur heroku**
- **Heroku** cliquez [**ici**](https://id.heroku.com/login) pour vous en procurer un .
-    [**ici**](https://dashboard.heroku.com/new?template=https://github.com/djalega8000/Zokou-2.0) 
+## Déploiement Method
+- **déploye on heroku**
 
-  [**Djalega++**](https://github.com/djalega8000/Zokou-MD/)  <br>
-  [**᚛M๏𝓷keℽ D Lบffy᚜**](https://github.com/Faouz995)
+  **Heroku**  [**Create a heroku account**](https://id.heroku.com/login) pour vous en procurer un .
+    [**Deploy on heroku**](https://dashboard.heroku.com/new?template=https://github.com/pierrette444/Smith-MD) 
+
+Hey brother please click on my name and click follow so you don't miss anything  [**➳ᴹᴿ᭄𝐃𝐞𝐧𝐳𝐨 𝐔𝐜𝐡𝐢𝐰𝐚 亗**](https://github.com/pierrette444)
+
  
