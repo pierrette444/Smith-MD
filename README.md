@@ -1,11 +1,5 @@
-<p align="center">
-  <a href="" target="_blank">
-    <img alt="Forks" src="https://img.Denzo.io/github/forks/pierrette444/Smith-MD" />
-  </a>
-  
- 
 
-</p>
+  </p>
 <p align="center"><img src="https://profile-counter.glitch.me/{excelottah6}/count.svg" alt="pierrette444 :: Visitor's Count" /></p>
 <p align="center">
  <a href="https://chat.whatsapp.com/JFNXyoRTf4t6e9GTaM2Oe6" target="_blank">
