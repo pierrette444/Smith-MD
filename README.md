@@ -17,15 +17,15 @@
  **[Fork](https://github.com/pierrette444/Smith-MD/fork)**  <br>
   
   [Session-ID](https://replit.com/@murnoire/Zuk?v=1) <br>
-  
-  [Replit](https://replit.com/@murnoire/Zuk?v=1)
-3. 
+ 
 
 ## Déploiement Method
+
 - **déploye on heroku**
 
-  **Heroku**  [**Create a heroku account**](https://id.heroku.com/login) pour vous en procurer un .
-    [**Deploy on heroku**](https://dashboard.heroku.com/new?template=https://github.com/pierrette444/Smith-MD) 
+  **Heroku**  [**Create a heroku account**](https://id.heroku.com/login)
+
+   [**Deploy on heroku**](https://dashboard.heroku.com/new?template=https://github.com/pierrette444/Smith-MD) 
 
 Hey brother please click on my name and click follow so you don't miss anything  [**➳ᴹᴿ᭄𝐃𝐞𝐧𝐳𝐨 𝐔𝐜𝐡𝐢𝐰𝐚 亗**](https://github.com/pierrette444)
 
