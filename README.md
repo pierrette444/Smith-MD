@@ -1,4 +1,4 @@
-
+<img alt=Support height="550" src="https://i.imgur.com/l2nUnSK.jpeg"> 
  
 <p align="center">
  <a href="https://chat.whatsapp.com/JFNXyoRTf4t6e9GTaM2Oe6" target="_blank">
