@@ -27,7 +27,7 @@
 
 <br>
 
-<h4 align="center"> Deploy on Repl.it
+<h4 align="center"> ```Deploy on Repl.it```
 </h4>
 
 <p align="center" >
@@ -38,13 +38,9 @@
 
 <p align="center" >
     <br>
-    __________________________
-    <br>
-</p>
+    
 
-
-
-  **Heroku account**  [**Create a heroku account**](https://id.heroku.com/login)
+   ## ```**Heroku account**```  [**Create a heroku account**](https://id.heroku.com/login)
 
   
   ⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️
