@@ -32,6 +32,10 @@
   
   ⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️
   
+ # ```HEROKU DEPLOYMENT```
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/pierrette444/Smith-MD)
+  
   **Deploy on heroku** [**Deploy on heroku**](https://dashboard.heroku.com/new?template=https://github.com/pierrette444/Smith-MD) 
 
 ## A BIG THANKS YOU TO⬇️⬇️⬇️
