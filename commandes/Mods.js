@@ -1,4 +1,4 @@
-const { zokou } = require('../framework/zokou');
+const { Smith } = require('../framework/Smith');
 const axios = require("axios")
 let { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter');
 const conf = require("../set");
@@ -11,20 +11,20 @@ zokou({ nomCom: "tgs", categorie: "Mods" }, async (dest, zk, commandeOptions) =>
   const { ms, repondre, arg, nomAuteurMessage, superUser } = commandeOptions;
 
   if (!superUser) {
-    repondre('Commande reservée au propriétaire du bot'); return;
+    repondre('Owner Commande'); return;
   }
   const apikey = conf.APILOLHUMAIN
 
-  if (apikey === null || apikey === 'null') { repondre('Veillez vérifier votre apikey ou si vous en avez pas , veiller crée un compte sur api.lolhuman.xyz et vous en procurer une.'); return; };
+  if (apikey === null || apikey === 'null') { repondre('Humm bro link no valide'); return; };
 
   if (!arg[0]) {
-    repondre("veuillez insérer un lien de sticker Telegram svp");
+    repondre("stikers link please ");
     return;
   }
 
   let lien = arg.join(' ');
 
-  let api = 'https://api.lolhuman.xyz/api/telestick?apikey=' + apikey + '&url=' + lien;
+  let api = 'https://api.lolhuman.xyz/api/telestick?apikey=' + apikey + '&url=' + link;
 
   try {
     const response = await axios.get(api);
@@ -33,55 +33,55 @@ zokou({ nomCom: "tgs", categorie: "Mods" }, async (dest, zk, commandeOptions) =>
     for (let i = 0; i < img.length; i++) {
       const sticker = new Sticker(img[i], {
         pack: nomAuteurMessage,
-        author: "Zokou-md",
+        author: "Smith-MD",
         type: StickerTypes.FULL,
-        categories: ['🤩', '🎉'],
+        categories: ['✨', '🥰'],
         id: '12345',
         quality: 50,
         background: '#000000'
       });
 
-      const stickerBuffer = await sticker.toBuffer(); // Convertit l'autocollant en tampon (Buffer)
+      const stickerBuffer = await sticker.toBuffer();
 
-      await zk.sendMessage(
+      await SMITH.sendMessage(
         dest,
         {
-          sticker: stickerBuffer, // Utilisez le tampon (Buffer) directement dans l'objet de message
+          sticker: stickerBuffer,
         },
         { quoted: ms }
       );
     }
   } catch (e) {
-    repondre("erreur lors de la procédure \n", e);
+    repondre("error \n", e);
   }
 });
 
-zokou({ nomCom: "crew", categorie: "Mods" }, async (dest, zk, commandeOptions) => {
+Smith({ nomCom: "crew", categorie: "Mods" }, async (dest, zk, commandeOptions) => {
   const { ms, repondre, arg, auteurMessage, superUser, auteurMsgRepondu, msgRepondu } = commandeOptions;
 
-  if (!superUser) { repondre("Reserver au modérateur "); return };
+  if (!superUser) { repondre("private option "); return };
 
-  if (!arg[0]) { repondre('Veillez entrez le nom du groupe à creer'); return };
-  if (!msgRepondu) { repondre('Veillez mentionner un membre a ajouté '); return; }
+  if (!arg[0]) { repondre('name groupe '); return };
+  if (!msgRepondu) { repondre('mention member added '); return; }
 
   const name = arg.join(" ")
 
   const group = await zk.groupCreate(name, [auteurMessage, auteurMsgRepondu])
   console.log("created group with id: " + group.gid)
-  zk.sendMessage(group.id, { text: `Bienvenue dans ${name}` })
+  zk.sendMessage(group.id, { text: `Welcome to ${name}` })
 
 });
 
 zokou({ nomCom: "bye", categorie: "Mods" }, async (dest, zk, commandeOptions) => {
 
   const { ms, repondre, verifGroupe, msgRepondu, verifAdmin, superUser, auteurMessage } = commandeOptions;
-  if (!verifGroupe) { repondre("commande reserver au groupe uniquement"); return };
+  if (!verifGroupe) { repondre("commande groupe"); return };
   if (!superUser) {
     repondre("commande reservée au propriétaire");
     return;
   }
 
-  await zk.groupLeave(dest)
+  await SMITH.groupLeave(dest)
 });
 
 zokou({ nomCom: "rejoindre", categorie: "Mods" }, async (dest, zk, commandeOptions) => {
@@ -89,25 +89,25 @@ zokou({ nomCom: "rejoindre", categorie: "Mods" }, async (dest, zk, commandeOptio
   const { arg, ms, repondre, verifGroupe, msgRepondu, verifAdmin, superUser, auteurMessage } = commandeOptions;
 
   if (!superUser) {
-    repondre("commande reservée au propriétaire du bot");
+    repondre("commande Owner");
     return;
   }
   let result = arg[0].split('https://chat.whatsapp.com/')[1] ;
  await zk.groupAcceptInvite(result) ;
   
       repondre(`Succes`).catch((e)=>{
-  repondre('Erreur inconnus')
+  repondre('Error')
 })
 
 })
 
 
-zokou({ nomCom: "jid", categorie: "Mods" }, async (dest, zk, commandeOptions) => {
+Smith({ nomCom: "jid", categorie: "Mods" }, async (dest, zk, commandeOptions) => {
 
   const { arg, ms, repondre, verifGroupe, msgRepondu, verifAdmin, superUser, auteurMessage,auteurMsgRepondu } = commandeOptions;
 
          if (!superUser) {
-    repondre("commande reservée au propriétaire du bot");
+    repondre("commande Owner");
     return;
   }
               if(!msgRepondu) {
@@ -124,15 +124,15 @@ zokou({ nomCom: "jid", categorie: "Mods" }, async (dest, zk, commandeOptions) =>
   const { arg, ms, repondre, verifGroupe, msgRepondu, verifAdmin, superUser, auteurMessage,auteurMsgRepondu } = commandeOptions;
 
        if (!superUser) {
-    repondre("commande reservée au propriétaire du bot");
+    repondre("commande Owner");
     return;
   } 
     
    if (!msgRepondu) {
-    repondre("Veiller mentionner le message svp");
+    repondre("mention msge please ");
     return; };
      if (!arg[0]) {
-    repondre('Veiller mettre le jid du destinataire');
+    repondre('jid number');
     return; } ;
 
    const jid = arg.join(' ')
@@ -149,13 +149,13 @@ zokou({ nomCom: "block", categorie: "Mods" }, async (dest, zk, commandeOptions) 
   const { arg, ms, repondre, verifGroupe, msgRepondu, verifAdmin, superUser, auteurMessage,auteurMsgRepondu } = commandeOptions;
 
          if (!superUser) {
-    repondre("commande reservée au propriétaire du bot");
+    repondre("commande OWNER");
     return;
   }
              
               if(!msgRepondu) { 
                 if(verifGroupe) {
-                  repondre('Veillez mentionner la personne a bloquer'); return
+                  repondre('mention number blocked'); return
                 } ;
                 jid = dest
 
@@ -173,12 +173,12 @@ zokou({ nomCom: "deblock", categorie: "Mods" }, async (dest, zk, commandeOptions
   const { arg, ms, repondre, verifGroupe, msgRepondu, verifAdmin, superUser, auteurMessage,auteurMsgRepondu } = commandeOptions;
 
          if (!superUser) {
-    repondre("commande reservée au propriétaire du bot");
+    repondre("commande OWner");
     return;
   }
               if(!msgRepondu) { 
                 if(verifGroupe) {
-                  repondre('Veillez mentionner la personne a debloquer'); return
+                  repondre('mention number no block'); return
                 } ;
                 jid = dest
 
@@ -198,10 +198,10 @@ zokou({ nomCom: "purge", categorie: "Groupe", reaction: "📣" }, async (dest, z
   const metadata = await zk.groupMetadata(dest) ;
  
 
-  if (!verifGroupe) { repondre("✋🏿 ✋🏿cette commande est réservée aux groupes ❌"); return; }
+  if (!verifGroupe) { repondre(" groupe commande 😇"); return; }
   if (superUser || auteurMessage == metadata.owner) { 
   
-   repondre('Les membres non admins seront retiré du groupe vous avez 5 secondes pour revandiquer votre choix en redemarrant le bot') ;
+   repondre('5s ') ;
    await sleep(5000)
   let membresGroupe = verifGroupe ? await infosGroupe.participants : "";
 try {
@@ -221,7 +221,7 @@ await zk.groupParticipantsUpdate(
     await sleep(500)
     
   }  
-} catch (e) {repondre("j'ai besoins des droit d'administration")} } else {
-  repondre("Commande reserver au proprietaire du groupe pour des raisons de securitée"); return
+} catch (e) {repondre("admin groupe approuve")} } else {
+  repondre("Commande Owner"); return
 }
 });
