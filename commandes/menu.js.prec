@@ -1,6 +1,6 @@
 const util = require('util');
 const fs = require('fs-extra');
-const { zokou } = require(__dirname + "/../framework/zokou");
+const { Smith } = require(__dirname + "/../framework/zokou");
 const { format, styletext } = require(__dirname + "/../framework/mesfonctions");
 //const {police}=require(__dirname+"/../framework/mesfonctions")
 const os = require("os");
@@ -44,8 +44,7 @@ zokou({ nomCom: "menu", categorie: "Général" }, async (dest, zk, commandeOptio
    ||      Date : ${date}
    ||      Heure : ${temps}
    ||      Mémoire : ${format(os.totalmem()-os.freemem())}/${format(os.totalmem())}                   {Plateforme : ${os.platform()}
-   ||  Développeurs : Djalega++||Luffy
-   ||
+   ||  
    ╚════ ▓▓ ࿇ ▓▓ ════╝`;*/
     menuMsg += `
 ╔════---------
@@ -57,7 +56,6 @@ zokou({ nomCom: "menu", categorie: "Général" }, async (dest, zk, commandeOptio
 ║    Heure : ${temps}
 ║    Mémoire : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
 ║    Plateforme : ${os.platform()}
-║    Développeurs : Djalega++||Luffy
 ╚════--------------- \n\n`;
     for (const cat in coms) {
         if (!emoji[cat]) {
@@ -115,7 +113,7 @@ var tt=[]
  async  function execute(dest,zok,commandeOptions?)
   {
 
-    var link = "https://wallpapercave.com/uwp/uwp3860299.jpeg"
+    var link = "https://i.imgur.com/0OyXEkR.jpeg"
     // var listCom =listeCommande()
     let msg= "  ╩═══ * Ƶ𝓞ｋØ𝓊 * ╩═══\n\n"
 
@@ -168,7 +166,7 @@ var tt=[]
 // }
 /** ********************************************* */
 //    }
-//console.log("installation de plugins terminé 👍🏿")
+//console.log("complet✨")
 // return tab
 // })
 // console.log("fichier "+typeof nomFichier)
@@ -206,7 +204,7 @@ var tt=[]
         msg+=+'\n'+comm
       }}
 
-    await zok.sendMessage(dest,{image :{url:link},caption:msg+txt});
+    await Smith.sendMessage(dest,{image :{url:link},caption:msg+txt});
 
     */
 //   
