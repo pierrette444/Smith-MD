@@ -25,19 +25,7 @@
 
 ## ```Déploiement Method```
 
-<br>
 
-<h4 align="center">  # ```Deploy on Repl.it```
-</h4>
-
-<p align="center" >
-    <a href="https://repl.it/github/pierrette444/Smith-MD">
-    <img src="https://repl.it/badge/github/quiec/whatsasena" width="170px" alt="Deploy on REPLIT" >
-    </a>
-</p>
-
-<p align="center" >
-    <br>
     
 
    ## ```**Heroku account**```  [**Create a heroku account**](https://id.heroku.com/login)
