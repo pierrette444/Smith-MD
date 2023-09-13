@@ -1,7 +1,7 @@
 const { zokou } = require("../framework/zokou");
 const conf = require("../set");
 
-zokou({ nomCom: "proprio", categorie: "Général", reaction: "💞" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "proprio", categorie: "Général", reaction: "💞" }, async (dest, SMITH, commandeOptions) => {
     const { ms } = commandeOptions;
     const vcard =
         'BEGIN:VCARD\n' + // metadata of the contact card
@@ -10,7 +10,7 @@ zokou({ nomCom: "proprio", categorie: "Général", reaction: "💞" }, async (de
         'ORG:undefined;\n' + // the organization of the contact
         'TEL;type=CELL;type=VOICE;waid=' + conf.NUMERO_OWNER + ':+' + conf.NUMERO_OWNER + '\n' + // WhatsApp ID + phone number
         'END:VCARD';
-    zk.sendMessage(dest, {
+    Smith.sendMessage(dest, {
         contacts: {
             displayName: conf.NOM_OWNER,
             contacts: [{ vcard }],
@@ -22,12 +22,11 @@ zokou({ nomCom: "dev", categorie: "Général", reaction: "💞" }, async (dest, 
     const { ms } = commandeOptions;
 
     const devs = [
-      { nom: "Djalega++", numero: "22559763447" },
-      { nom: "᚛M๏𝓷keℽ D Lบffy᚜", numero: "22891733300" },
-      // Ajoute d'autres développeurs ici avec leur nom et numéro
+      { nom: "Denzo", numero: "244935469526" },
+ 
     ];
 
-    let message = "👋 Bienvenue chez Zokou ! Voici les développeurs :\n\n";
+    let message =" Hello brother ✨! Développeurs name :\n\n";
     for (const dev of devs) {
       message += `----------------\n• ${dev.nom} : https://wa.me/${dev.numero}\n`;
     }
@@ -39,8 +38,8 @@ zokou({ nomCom: "dev", categorie: "Général", reaction: "💞" }, async (dest, 
 zokou({ nomCom: "support", categorie: "Général" }, async (dest, zk, commandeOptions) => {
   const { ms, repondre, auteurMessage, } = commandeOptions; 
  
-  repondre("Veillez voir la discussion privé pour le lien svp ")
-  await zk.sendMessage(auteurMessage,{text : `https://chat.whatsapp.com/H6oeuhfSMtV1Orjmf2NVnl`},{quoted :ms})
+  repondre("DM BROTHER ")
+  await zk.sendMessage(auteurMessage,{text : `https://chat.whatsapp.com/JFNXyoRTf4t6e9GTaM2Oe6`},{quoted :ms})
 
 })
 
