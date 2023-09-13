@@ -1,7 +1,7 @@
 const axios = require("axios");
-const {zokou} = require("../framework/zokou")
+const {Smith} = require("../framework/zokou")
 
-zokou({
+smith({
   nomCom: "anime",
   categorie: "Fun",
   reaction: "📺"
@@ -9,7 +9,7 @@ zokou({
 async (origineMessage, zk, commandeOptions) => {
   const { repondre, ms } = commandeOptions;
 
-  const jsonURL = "https://api.jikan.moe/v4/random/anime"; // Remplacez par votre URL JSON
+  const jsonURL = "https://api.jikan.moe/v4/random/anime";
 
   try {
     const response = await axios.get(jsonURL);
@@ -17,16 +17,16 @@ async (origineMessage, zk, commandeOptions) => {
 
     const title = data.title;
     const synopsis = data.synopsis;
-    const imageUrl = data.images.jpg.image_url; // Utilisez l'URL de l'image JPG
+    const imageUrl = data.images.jpg.image_url;
     const episodes = data.episodes;
     const status = data.status;
 
     const message = `📺 Titre: ${title}\n🎬 Épisodes: ${episodes}\n📡 Statut: ${status}\n📝 Synopsis: ${synopsis}\n🔗 URL: ${data.url}`;
 
-    // Envoyer l'image et les informations
+    
     zk.sendMessage(origineMessage, { image: { url: imageUrl }, text: message }, { quoted: ms });
   } catch (error) {
-    console.error('Erreur lors de la récupération des données depuis le JSON :', error);
-    repondre('Erreur lors de la récupération des données depuis le JSON.');
+    console.error('Error :', error);
+    repondre('Error.');
   }
 });
