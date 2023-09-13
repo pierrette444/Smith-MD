@@ -12,8 +12,8 @@ zokou({ nomCom: "menu", categorie: "Général" }, async (dest, zk, commandeOptio
     var coms = {};
     var mode = "public";
     
-    if (s.MODE != "oui") {
-        mode = "privé";
+    if (s.MODE != "true") {
+        mode = "public";
     }
     
     var emoji = { "Général": "🌐", "Logo": "🎨", "Hentai": "🔥", "Weeb": "🌸", "Recherche": "🔍", "Conversion": "🌟", "Groupe": "♻️", "Autre": "🪖" };
@@ -30,7 +30,7 @@ zokou({ nomCom: "menu", categorie: "Général" }, async (dest, zk, commandeOptio
 
   let infoMsg = `
 ╔════---------
-║    Préfixe : ${s.PREFIXE}
+║   My Préfixe : ${s.PREFIXE}
 ║    Owner : ${s.NOM_OWNER}
 ║    Mode : ${mode}
 ║    Commandes : ${cm.length}
@@ -38,30 +38,25 @@ zokou({ nomCom: "menu", categorie: "Général" }, async (dest, zk, commandeOptio
 ║    Heure : ${temps}
 ║    Mémoire : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
 ║    Plateforme : ${os.platform()}
-║    Développeurs : Djalega++ 
-║     & Luffy
+║ 
 ╚════--------------- \n\n`;
     
     let menuMsg = `
-👋 salut ${nomAuteurMessage} 👋
-Je suis *${s.NOM_BOT}*, un bot développé par *La team Zokou*.
-🔰 Mon préfixe : ${prefixe}
+👋 Hi brother ${nomAuteurMessage} 🥰🥰
+I"am *${s.NOM_BOT}*,
+My préfixe : ${prefixe}
 **Voici la liste de mes commandes :**
 `;
 
     for (const cat in coms) {
         menuMsg += `
-*━━━〈  ${cat} 〉━━━*`;
+*║━━━〈  ${cat} 〉━━━║*`;
         for (const cmd of coms[cat]) {
             menuMsg += `
 - ${cmd}`;
         }
     }
 
-    menuMsg += `\n\n
-🔰 Pour utiliser une commande, tapez "${prefixe}<nom de la commande>".
-🔰 Fait avec node.js || Zokou_2.0-MD
-`;
 
     var link = s.IMAGE_MENU;
 
