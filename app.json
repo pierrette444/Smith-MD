@@ -1,52 +1,46 @@
 {
-  "name":"Zokou-2.0",
-  "description":"bot whatsapp développé par djalega++",
+  "name":"Smith-MD",
+  "description":"bot whatsapp",
   "keywords":["bot","node","baileys","whatsapp"],
-  "logo":"https://raw.githubusercontent.com/djalega8000/Zokou-2.0/main/Zokou.jpg",
-  "repository":"https://github.com/djalega8000/Zokou-2.0",
+  "logo":"https://raw.githubusercontent.com/pierrette444/Smith-MD/main/Smith.jpg",
+  "repository":"https://github.com/pierrette444/Smith-MD",
   "succes_url":"/",
   "stack":"container",
   "env":{
     "PREFIXE":
     {
-      "description":"choisissez votre préfixe",
-      "value":"#",
+      "description":"préfixe",
+      "value":".",
       "required":true
     },
-    "LECTURE_AUTO_STATUS":
+    "Read_AUTO_STATUS":
     {
-      "description":"le bot lira tous les status automatiquement (oui pour activer et non pour désactiver)",
-      "value":"oui",
+      "value":"false",
       "required":false
-    }, "TELECHARGER_AUTO_STATUS":
+    }, "Download_AUTO_STATUS":
     {
-      "description":"le bot téléchargera tous les status automatiquement (oui pour activer et non pour désactiver)",
-      "value":"oui",
+      "value":"false",
       "required":false
     }
     ,
      "PM_PERMIT" :
-     {
-      "description":"Les commandes seront pas fonctionnelles en priver pour les autres utilisateurs (oui pour activer et non pour désactiver)",
-      "value":"non",
+  }
+      "value":"false",
       "required":false
     }
     ,
     "MODE_PUBLIC":
-    {
-      "description":"oui pour le mode public ou non pour le mode privé(Dans ce vous seul  utiliserez le bot)",
-      "value":"oui",
+ }
+      "value":"true",
       "required":false
-    },
-    "APILOLHUMAIN":
-    {
-      "description":"placer votre  apikey de chez api.lolhuman.xyz(pas obligatoire)",
+    }
+
       "value":"",
       "required":false
     },
     "SESSION_ID":
     {
-      "description":"veuillez renseigner votre id de session",   
+      "description":"Session ID",   
       "value":"",
       "required":true
       
@@ -61,23 +55,22 @@
     "NUMERO_OWNER":
   {
     
-    "desc": "Le numéro du propriétaire",
+    "desc": "Owner number",
     "required":false,
-    "value": "225XXXXXXXXX"
+    "value": "244935469526"
   },
     "IMAGE_MENU":
    {
     
-    "desc": "L'URL de l'image du menu",
+    "desc": "IMG menu",
     "required":false,
-    "value": "https://raw.githubusercontent.com/djalega8000/Zokou-2.0/main/Zokou.jpg"
+    "value": "https://raw.githubusercontent.com/pierrette444/Smith-MD/main/Smith.jpg"
   },
-    "NOM_BOT":
+    "Name_BOT":
 {
     
-    "desc": "Le nom du bot",
     "required": false,
-    "value": "Ƶ𝓞ｋØ𝓊-2.0"
+    "value": "Smith-MD"
   }
   },
 
