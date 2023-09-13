@@ -17,8 +17,8 @@
  *click on*[Fork](https://github.com/pierrette444/Smith-MD/fork)*to properly deploy your bot*  <br>
   
 
-
-
+# ```SCANNE QR CODE```
+⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️
  *click here to be able to have the bot session*
  [{✨**Session-ID✨**}](https://replit.com/@murnoire/Zuk?v=1) <br>
  
