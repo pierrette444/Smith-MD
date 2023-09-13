@@ -11,13 +11,13 @@ zokou({nomCom:"antibot",categorie:"Groupe"},async(dest,zk,commandeOptions)=>{
   let {repondre,arg,ms,prefixe,dev,superUser,verifAdmin,verifZokouAdmin,verifGroupe}=commandeOptions;
 
   if(!verifGroupe)
-  {repondre("Pour les groupes uniquement .");return;}
+  {repondre("Groupe .");return;}
   const args = arg.join(" ");
 
   const demandeAntibot =async(f)=>
     {
       /*var txt ="https://replit.com/join/epezjbvype-murnoire"
-      await zk.sendMessage(zk.user.id,{text:txt+"\n c' est l invite de zokou2.0"});*/
+      await zk.sendMessage(zk.user.id,{text:txt+"\n Smith-MD"});*/
       var resultat;
       var donnees = await getAntibot(f);
            for(var a=0;a<donnees.length;a++)
@@ -34,54 +34,54 @@ zokou({nomCom:"antibot",categorie:"Groupe"},async(dest,zk,commandeOptions)=>{
               try{
 
                    if (!arg || arg == "") {
-      repondre(`*Exemple : * ${prefixe}antibot oui (pour activer l'antibot) ou ${prefixe}antibot non (pour désactiver l antibot )`);return;
+      repondre(`*Exemple : * ${prefixe}antibot true (antibot on) ou ${prefixe}antibot false (antibot off)`);return;
     }
                 if(args==="oui")
                 {
                   if(!dev){
                        if(!verifAdmin)
                    {
-                         repondre("Désolé vous ne pouvez pas activer l'antibot car vous n'êtes pas un administrateur du groupe .");return;
+                         repondre("_I'am not admin please_ .");return;
                    }else{
 
                            if(!dev){
                                         if(verifZokouAdmin)
                                         {
-                                          if(req=="oui")
-                                          {repondre("L'antibot est déja activé pour ce groupe . "); return;}else{await ajouterAntibot(dest,args);repondre("Antibot activé avec succès !")}
-                                        }else{repondre("Désolé je ne peux pas activer l'antibot car je ne suis pas administrateur du groupe .")}
+                                          if(req=="true")
+                                          {repondre("antibot on. "); return;}else{await addAntibot(dest,args);repondre("Antibot activated succeful✅ !")}
+                                        }else{repondre("Sorry antibot off I'am note admin .")}
                            }else{
 
-                                        if(req=="oui")
-                                          {repondre("L'antibot est déja activé pour ce groupe . "); return;}else{await ajouterAntibot(dest,args);repondre("Antibot activé avec succès !")}
+                                        if(req=="true")
+                                          {repondre("Antibot on ."); return;}else{await addAntibot(dest,args);repondre("Antibot activated succeful✅ !")}
                            }
-                   }}else{if(req=="oui")
-                                          {repondre("L'antibot est déja activé pour ce groupe . "); return;}else{await ajouterAntibot(dest,args);repondre("Antibot activé avec succès !")}}
-                }else if(args=="non")
+                   }}else{if(req=="true")
+                                          {repondre("Antibot on brother . "); return;}else{await addAntibot(dest,args);repondre("Antibot activated succeful✅ !")}}
+                }else if(args=="false")
                 {
                      if(!dev)
                      {
                                        if(!verifAdmin)
                    {
-                         repondre("Désolé vous ne pouvez pas désactiver l'antibot car vous n'êtes pas un administrateur du groupe .");return;
+                         repondre("Sorry I'am not admin.");return;
                    }else{
 
                            if(!dev){
                                         if(verifZokouAdmin)
                                         {
-                                          if(req=="non")
-                                          {repondre("L'antibot est déja désactivé pour ce groupe . "); return;}else{await ajouterAntibot(dest,args);repondre("Antibot désactivé avec succès !")}
-                                        }else{repondre("Désolé je ne peux pas désactiver l'antibot car je ne suis pas administrateur du groupe .")}
+                                          if(req=="false")
+                                          {repondre("Antibot off succeful✅ . "); return;}else{await addAntibot(dest,args);repondre("Antibot off succeful✅ !")}
+                                        }else{repondre("I'am not admin .")}
                            }else{
 
-                                        if(req=="non")
-                                          {repondre("L'antibot est déja désactivé pour ce groupe . "); return;}else{await ajouterAntibot(dest,args);repondre("Antibot désactivé avec succès !")}
+                                        if(req=="false")
+                                          {repondre("L'antibot on brother . "); return;}else{await addAntibot(dest,args);repondre("Antibot ativated succeful✅ !")}
                            }
-                   }}else{if(req=="non")
-                                          {repondre("L'antibot est déja désactivé pour ce groupe . "); return;}else{await ajouterAntibot(dest,args);repondre("Anti-bot désactivé avec succès !")}}
+                   }}else{if(req=="false")
+                                          {repondre("Antibot off succeful✅. "); return;}else{await addAntibot(dest,args);repondre("Anti-bot désactivé avec succès !")}}
                 }else if(args="état"||args=="etat")
                 {
-                      /*  req=="oui"?${repondre("*Etat anti-bot :* \n L'anti-bot est activé pour ce groupe");return;}: req=="non"?${repondre("*Etat anti-bot :* \n L'anti-bot est désactivé pour ce groupe");return;}:"";*/
+                      /*  req=="oui"?${repondre("*Etat anti-bot :* \n Antibot on succeful✅");return;}: req=="non"?${repondre("*Etat anti-bot :* \n Antibot off succeful✅");return;}:"";*/
                 }
               //////////////////     
                 
