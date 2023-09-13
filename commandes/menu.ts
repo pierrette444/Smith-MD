@@ -10,17 +10,17 @@ const s =require(__dirname+"/../set")
 
 
 
-zokou({nomCom:"menu",categorie:"Général"},async(dest,zk,commandeOptions)=>{
+zokou({nomCom:"menu",categorie:"Général"},async(dest,Smith,commandeOptions)=>{
 let {ms,repondre}=commandeOptions;
-let {cm}=require(__dirname+"/../framework//zokou")
+let {cm}=require(__dirname+"/../framework/Smith/")
   var coms={}
   var mode ="public";
-  if(s.MODE!="oui")
+  if(s.MODE!="false")
   {
-    mode="privé"
+    mode="private"
   }
 
-  var emoji={"Général":"🌐","Logo":"🎨","Hentai":"🔥","Weeb":"🌸","Recherche":"🔍","Conversion":"🌟","Groupe":"♻️","Autre":"🪖"}
+  var emoji={"Général":"🌐","Logo":"🎨","Hentai":"🔞","Weeb":"💻","Recherche":"🔍","Conversion":"✅","Groupe":"✨","Autre":"⚡"}
 cm.map(async(com,index)=>{if(!coms[com.categorie])coms[com.categorie]=[]; coms[com.categorie].push(com.nomCom)})
               
   const temps=moment(moment()).format("HH:MM:SS")
@@ -59,9 +59,7 @@ Owner : ${s.NOM_OWNER} \n       || Commandes : ${cm.length} \n        || Date : 
 ||      Commandes : ${cm.length}      
 ||      Date : ${date}
 ||      Heure : ${temps}
-||      Mémoire : ${format(os.totalmem()-os.freemem())}/${format(os.totalmem())}                   {Plateforme : ${os.platform()}
-||  Développeurs : Djalega++||Luffy
-|| 
+||      Mémoire : ${format(os.totalmem()-os.freemem())}/${format(os.totalmem())}                   {Plateforme : ${os.platform()} 
 ╚════ ▓▓ ࿇ ▓▓ ════╝`;*/
 
 
@@ -75,7 +73,6 @@ Owner : ${s.NOM_OWNER} \n       || Commandes : ${cm.length} \n        || Date : 
 ║    Heure : ${temps}
 ║    Mémoire : ${format(os.totalmem()-os.freemem())}/${format(os.totalmem())}
 ║    Plateforme : ${os.platform()}
-║    Développeurs : Djalega++||Luffy
 ╚════--------------- \n\n`;
 
 
