@@ -11,10 +11,10 @@ zokou({ nomCom: "menu", categorie: "Général" }, async (dest, zk, commandeOptio
     let { cm } = require(__dirname + "/../framework//zokou");
     var coms = {};
     var mode = "public";
-    if (s.MODE != "oui") {
-        mode = "privé";
+    if (s.MODE != "false") {
+        mode = "private";
     }
-    var emoji = { "Général": "🌐", "Logo": "🎨", "Hentai": "🔥", "Weeb": "🌸", "Recherche": "🔍", "Conversion": "🌟", "Groupe": "♻️", "Autre": "🪖" };
+    var emoji = { "Général": "🌐", "Logo": "🎨", "Hentai": "🔞", "Weeb": "✅", "Recherche": "🔍", "Conversion": "💻", "Groupe": "✨", "Autre": "⚡" };
     cm.map(async (com, index) => { if (!coms[com.categorie])
         coms[com.categorie] = []; coms[com.categorie].push(com.nomCom); });
     const temps = moment(moment()).format("HH:MM:SS");
