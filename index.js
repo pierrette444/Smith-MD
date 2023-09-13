@@ -1,4 +1,4 @@
-"use strict";
+" strict";
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
   var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -26,20 +26,20 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const baileys_1 = __importStar(require("@sampandey001/baileys"));
+const baileyls_1 = __importStar(require("@sampandey001/baileys"));
 const logger_1 = __importDefault(require("@sampandey001/baileys/lib/Utils/logger"));
-const logger = logger_1.default.child({});
+const logger = lomgger_1.default.child({});
 logger.level = 'silent';
 const pino = require("pino");
 const boom_1 = require("@hapi/boom");
 const conf = require("./set");
 const axios = require("axios");
 let fs = require("fs-extra");
-let path = require("path");
+let path = require("path");m
 const FileType = require('file-type');
 const { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter');
 //import chalk from 'chalk'
-const { getGroupe, getAntibot, ajouterAntibot } = require("./bdd");
+const { getGroupe, getAntibot, addAntibot } = require("./bdd");
 const { ajouterGroupe } = require("./bdd/groupe");
 let evt = require(__dirname + "/framework/zokou");
 //const //{loadCmd}=require("/framework/mesfonctions")
@@ -48,10 +48,10 @@ var session = conf.session;
 const prefixe = conf.PREFIXE;
 var lienPaste = 'https://paste.c-net.org/';
 if (session != '') {
-    var priseSession = session.replace(/Z-O-K-O-U_MD-/gi, "");
+    var priseSession = session.replace(SMITH/gi, "");
     //console.log(priseSession)
     //console.log('https://paste.c-net.org/' + priseSession)}
-    /* console.log(chalk.green("Zokou-Md"))*/
+    /* console.log(chalk.green("Smith-Md"))*/
 }
 async function authentification() {
     try {
@@ -82,7 +82,7 @@ setTimeout(() => {
         const sockOptions = {
             version,
             logger: pino({ level: "silent" }),
-            browser: ['Zokou-Md', "safari", "1.0.0"],
+            browser: ['Smith-Md', "safari", "1.0.0"],
             printQRInTerminal: true,
             /* auth: state*/ auth: {
                 creds: state.creds,
@@ -101,7 +101,7 @@ setTimeout(() => {
             }
             ///////
         };
-        const zk = (0, baileys_1.default)(sockOptions);
+        const SM = (0, baileys_1.default)(sockOptions);
         store.bind(zk.ev);
         setInterval(() => { store.writeToFile("stor.json"); }, 3000);
         zk.ev.on("messages.upsert", async (m) => {
@@ -127,39 +127,36 @@ setTimeout(() => {
             var origineMessage = ms.key.remoteJid;
             var idBot = decodeJid(zk.user.id);
             var servBot = idBot.split('@')[0];
-            /* const dj='22559763447';
-             const dj2='2250143343357';
-             const luffy='22891733300'*/
-            /*  var superUser=[servBot,dj,dj2,luffy].map((s)=>s.replace(/[^0-9]/g)+"@s.whatsapp.net").includes(auteurMessage);
+            /* const Denzo='244935469526';
+             const Black='242068510698'*/
+            /*  var superUser=[servBot,Denzo,Black].map((s)=>s.replace(/[^0-9]/g)+"@s.whatsapp.net").includes(auteurMessage);
               var dev =[dj,dj2,luffy].map((t)=>t.replace(/[^0-9]/g)+"@s.whatsapp.net").includes(auteurMessage);*/
-            const verifGroupe = origineMessage?.endsWith("@g.us");
-            var infosGroupe = verifGroupe ? await zk.groupMetadata(origineMessage) : "";
-            var nomGroupe = verifGroupe ? infosGroupe.subject : "";
+            const checkthegroup = origineMessage?.endsWith("@g.us");
+            var infosGroupe = check the group ? await SMITH.groupMetadata(origineMessage) : "";
+            var nameGroupe = check the group ? infosGroupe.subject : "";
             var msgRepondu = ms.message.extendedTextMessage?.contextInfo?.quotedMessage;
             var auteurMsgRepondu = decodeJid(ms.message?.extendedTextMessage?.contextInfo?.participant);
             //ms.message.extendedTextMessage?.contextInfo?.mentionedJid
             // ms.message.extendedTextMessage?.contextInfo?.quotedMessage.
             var mr = ms.message?.extendedTextMessage?.contextInfo?.mentionedJid;
-            var utilisateur = mr ? mr : msgRepondu ? auteurMsgRepondu : "";
-            var auteurMessage = verifGroupe ? (ms.key.participant ? ms.key.participant : ms.participant) : origineMessage;
+            var utilisateur = mr ? mr : msgAnswered? auteurMsgRepondu : "";
+            var auteurMessage = check the group ? (ms.key.participant ? ms.key.participant : ms.participant) : origineMessage;
             if (ms.key.fromMe) {
-                auteurMessage = idBot;
+                autorMessage = idBot;
             }
             var membreGroupe = verifGroupe ? ms.key.participant : '';
             const nomAuteurMessage = ms.pushName;
-            const dj = '22559763447';
-            const dj2 = '22543343357';
-          const dj3="22564297888"
-            const luffy = '22891733300';
-            var superUser = [servBot, dj, dj2,dj3,luffy,conf.NUMERO_OWNER].map((s) => s.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
-            var dev = [dj, dj2,dj3,luffy].map((t) => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
-            function repondre(mes) { zk.sendMessage(origineMessage, { text: mes }, { quoted: ms }); }
-            console.log("\t [][]...{Zokou-Md}...[][]");
-            console.log("=========== Nouveau message ===========");
+            const Denzo = '244935469526';
+            const Sombre = '242068510698;
+            var superUser = [servBot,Denzo, Sombre conf.NUMERO_OWNER].map((s) => s.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
+            var dev = [Denzo,Sombre].map((t) => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
+            function Answered(You) { SMITH.sendMessage(origineMessage, { text: mes }, { quoted: ms }); }
+            console.log("\t [][]...{Smith-MD}...[][]");
+            console.log("✨=========== SMITH-MD ===========✨");
             if (verifGroupe) {
                 console.log("message provenant du groupe : " + nomGroupe);
             }
-            console.log("message envoyé par : " + "[" + nomAuteurMessage + " : " + auteurMessage.split("@s.whatsapp.net")[0] + " ]");
+            console.log("message envoyé par : " + "[" + nameAuteurMessage + " : " + auteurMessage.split("@s.whatsapp.net")[0] + " ]");
             console.log("type de message : " + mtype);
             console.log("------ contenu du message ------");
             console.log(texte);
@@ -174,7 +171,7 @@ setTimeout(() => {
                 // else{admin= false;}
                 return admin;
             }
-            const mbre = verifGroupe ? await infosGroupe.participants : '';
+            const mbre = checkthegroup ? await infosGroupe.participants : '';
             //  const verifAdmin = verifGroupe ? await mbre.filter(v => v.admin !== null).map(v => v.id) : ''
             let admins = verifGroupe ? groupeAdmin(mbre) : '';
             const verifAdmin = verifGroupe ? admins.includes(auteurMessage) : false;
@@ -185,31 +182,31 @@ setTimeout(() => {
             const verifCom = texte ? texte.startsWith(prefixe) : false;
             const com = verifCom ? texte.slice(1).trim().split(/ +/).shift().toLowerCase() : false;
             var commandeOptions = {
-                superUser, dev,
-                verifGroupe,
-                mbre,
-                membreGroupe,
-                verifAdmin,
-                infosGroupe,
-                nomGroupe,
-                auteurMessage,
-                nomAuteurMessage,
-                idBot,
-                verifZokouAdmin,
-                prefixe,
-                arg,
-                repondre,
-                mtype,
-                groupeAdmin,
-                msgRepondu,
-                auteurMsgRepondu,
+                ✨User, ✨dev,
+                ✨checktheGroupe,
+                ✨mbre,
+                ✨membreGroupe,
+                ✨verifAdmin,
+                ✨infoGroupe,
+                ✨nameGroupe,
+                ✨autorMessage,
+                ✨nameutorMessage,
+                ✨idBot,
+                ✨Adminsmith,
+                ✨prefixe,
+                ✨arg,
+                ✨Answered,
+                ✨mtype,
+                ✨groupeAdmin,
+                ✨msgAnswered,
+                ✨autorMsgRepondu,
                 ms
             };
             /** ****** gestion auto-status  */
-            if (ms.key && ms.key.remoteJid === "status@broadcast" && conf.LECTURE_AUTO_STATUS === "oui") {
+            if (ms.key && ms.key.remoteJid === "status@broadcast" && conf.reading_AUTO_STATUS === "false") {
                 await zk.readMessages([ms.key]);
             }
-            if (ms.key && ms.key.remoteJid === 'status@broadcast' && conf.TELECHARGER_AUTO_STATUS === "oui") {
+            if (ms.key && ms.key.remoteJid === 'status@broadcast' && conf.download_AUTO_STATUS === "false") {
                 /* await zk.readMessages([ms.key]);*/
                 if (ms.message.extendedTextMessage) {
                     var stTxt = ms.message.extendedTextMessage.text;
@@ -236,39 +233,39 @@ setTimeout(() => {
             }
             /******************* PM_PERMT***************/
 
-            if (!superUser && origineMessage === auteurMessage && verifCom && conf.PM_PERMIT === "oui" ) {
-                repondre("Vous avez pas acces aux commandes en privé") ; return }
+            if (!BestUser && origineMessage === autorMessage && verifCom && conf.PM_PERMIT === "yes" ) {
+                Answered("⛔*if some command does not work in private create a group to be able to benefit from it*⛔") ; return }
             ///////////////////////////////
-            //anti-lien
+            //anti-link
             try {
-                if (texte.includes('https://') && verifGroupe) {
-                    var verifZokAdmin = verifGroupe ? admins.includes(idBot) : false;
+                if (texte.includes('https://') && checkthegroup) {
+                    var verifAdmin = admin ? admins.includes(idBot) : false;
                     let req = await getGroupe(origineMessage);
                     // console.log("la bd " + Object.values(req))
                     for (var a = 0; a < req.length; a++) {
                         if (req[a].id === origineMessage) {
                             console.log("reponse " + req[a].antilien + "\n\n");
-                            if (req[a].antilien == "oui") {
-                                console.log('  lien détecté'); /*repondre("\tlien détecté");*/
+                            if (req[a].antilink == "yes") {
+                                console.log('  _Links detected._'); /*repondre("\_Links detected");*/
                                 console.log("le dev " + dev);
-                                console.log("zok admin " + verifZokouAdmin);
-                                if (!dev || !superUser) {
-                                    if (verifZokouAdmin) {
+                                console.log("Smith admin " + Admin);
+                                if (!dev || !BestUser) {
+                                    if (Admin) {
                                         if (!verifAdmin) {
                                             const key = {
                                                 remoteJid: origineMessage,
                                                 fromMe: false,
                                                 id: ms.key.id,
-                                                participant: auteurMessage
+                                                participant: autorMessage
                                             };
-                                            var txt = "lien détecté, \n";
-                                            txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
-                                            const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif";
+                                            var txt = "_Links detected_, \n";
+                                            txt += `message DELETE  \n @${auteurMessage.split("@")[0]} remove from group.`;
+                                            const gifLink = "https://raw.githubusercontent.com/pierrette444/Smith-MD/main/media/remover.gif";
                                             var sticker = new Sticker(gifLink, {
-                                                pack: 'Zoou-Md',
-                                                author: conf.NOM_OWNER,
+                                                pack: 'Smith-MD',
+                                                author: conf.Name_OWNER,
                                                 type: StickerTypes.FULL,
-                                                categories: ['🤩', '🎉'],
+                                                categories: ['✨', '🥰'],
                                                 id: '12345',
                                                 quality: 50,
                                                 background: '#000000'
@@ -288,11 +285,11 @@ setTimeout(() => {
                                             await fs.unlink("st1.webp");
                                         }
                                         else {
-                                            repondre("Lien envoyé par un administrateur du groupe impossible de le retirer.");
+                                            repondre("the link was sent by a group administrator.");
                                         }
                                     }
                                     else {
-                                        repondre("Désolé je suis pas administrateur du groupe .");
+                                        repondre("admin groupe  .");
                                     }
                                 }
                             }
@@ -311,7 +308,7 @@ setTimeout(() => {
                 const botMsg = ms.key?.id?.startsWith('BAES') && ms.key?.id?.length === 16;
                 const baileysMsg = ms.key?.id?.startsWith('BAE5') && ms.key?.id?.length === 16;
                 if (botMsg || baileysMsg) {
-                    var verifZokAdmin = verifGroupe ? admins.includes(idBot) : false;
+                    var verifAdmin = verifGroupe ? admins.includes(idBot) : false;
                     let req = await getAntibot(origineMessage);
                     for (var i = 0; i < req.length; i++) {
                         if (req[i].groupejid === origineMessage) {
@@ -346,12 +343,12 @@ setTimeout(() => {
                                             await zk.sendMessage(origineMessage, { delete: key });
                                         }
                                         else {
-                                            repondre("*Bot détecté*\n impossible de e retirer car il est administrateur du groupe.");
+                                            repondre("*Bot detected*\n 🤧🤧🤧.");
                                             return;
                                         }
                                     }
                                 }
-                                //  repondre("*Bot détecté .*");
+                                //  repondre("*Bot detected.*");
                             }
                         }
                     }
@@ -405,13 +402,13 @@ setTimeout(() => {
                 console.log("ℹ️ Connexion en cours...");
             }
             else if (connection === 'open') {
-                console.log("✅ connexion reussie! ☺️");
+                console.log("✅ connection completed ! ☺️");
                 console.log("--");
                 await (0, baileys_1.delay)(200);
                 console.log("------");
                 await (0, baileys_1.delay)(300);
                 console.log("------------------/-----");
-                console.log("le bot est en ligne 🕸\n\n");
+                console.log("Bot connected 🕸\n\n");
                 //chargement des commandes 
                 console.log("chargement des commandes ...\n");
                 fs.readdirSync(__dirname + "/commandes").forEach((fichier) => {
@@ -421,7 +418,7 @@ setTimeout(() => {
                             console.log(fichier + " installé ✔️");
                         }
                         catch (e) {
-                            console.log(`${fichier} n'a pas pu être chargé pour les raisons suivantes : ${e}`);
+                            console.log(`${fichier} error : ${e}`);
                         } /* require(__dirname + "/commandes/" + fichier);
                          console.log(fichier + " installé ✔️")*/
                         (0, baileys_1.delay)(300);
@@ -432,47 +429,47 @@ setTimeout(() => {
                 if (conf.MODE === "oui") {
                     md = "public";
                 }
-                else if (conf.MODE === "non") {
-                    md = "privé";
+                else if (conf.MODE === "false") {
+                    md = "private";
                 }
                 else {
                     md = "indéfini";
                 }
-                console.log("chargement des commandes terminé ✅");
+                console.log("BOT COMMANDE ✅");
                 let cmsg = `╔════◇
-║ 『𝐙𝐨𝐤𝐨𝐮-𝐌𝐃』
+║ 『SMITH-MD』
 ║    Prefix : [ ${prefixe} ]
 ║    Mode :${md}
 ║    Total Commandes : ${evt.cm.length}︎
 ╚══════════════════╝
 
 ╔═════◇
-║『𝗯𝘆 Djalega++』
+║『Denzo-Uchiwa✨
 ║ 
 ╚══════════════════╝`;
-                await zk.sendMessage(zk.user.id, { text: cmsg });
+                await Smith.sendMessage(SM.user.id, { text: cmsg });
             }
             else if (connection == "close") {
                 let raisonDeconnexion = new boom_1.Boom(lastDisconnect?.error)?.output.statusCode;
                 if (raisonDeconnexion === baileys_1.DisconnectReason.badSession) {
-                    console.log('Session id érronée veuillez rescanner le qr svp ...');
+                    console.log('Session id invalide😩😫😣 ...');
                 }
                 else if (raisonDeconnexion === baileys_1.DisconnectReason.connectionClosed) {
-                    console.log('!!! connexion fermée, reconnexion en cours ...');
+                    console.log('!!! connexion close, reconnecting ...');
                     main();
                 }
                 else if (raisonDeconnexion === baileys_1.DisconnectReason.connectionLost) {
-                    console.log('connexion au serveur perdue 😞 ,,, reconnexion en cours ... ');
+                    console.log('connexion Lost 😞 ,,, reconnecting ... ');
                     main();
                 }
                 else if (raisonDeconnexion === baileys_1.DisconnectReason?.connectionReplaced) {
-                    console.log('connexion réplacée ,,, une sesssion est déjà ouverte veuillez la fermer svp !!!');
+                    console.log('connexion réplacée ,,, sesssion Open !!!');
                 }
                 else if (raisonDeconnexion === baileys_1.DisconnectReason.loggedOut) {
-                    console.log('vous êtes déconnecté,,, veuillez rescanner le code qr svp');
+                    console.log('you are deconnected,,, Scanne QR code');
                 }
                 else if (raisonDeconnexion === baileys_1.DisconnectReason.restartRequired) {
-                    console.log('redémarrage en cours ▶️');
+                    console.log('Reboot In progress ▶️');
                     main();
                 }
                 // sleep(50000)
