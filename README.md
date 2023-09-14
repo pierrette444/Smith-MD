@@ -20,7 +20,7 @@
 # ```SCANNE QR CODE```
 ⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️
  *click here to be able to have the bot session*
- [![✨**Session-ID✨**](https://replit.com/@Smith2023/BUTTER-QUEEN-MD) <br>
+ [![✨**Session-ID✨**](https://replit.com/@Smith2023/SMITH-MD?v=1) <br>
  
 
 ## ```Déploiement Method```
