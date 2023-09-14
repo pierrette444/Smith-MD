@@ -2,12 +2,11 @@ const { zokou } = require("../framework/zokou");
 const canvacord = require("canvacord");
 const {uploadImageToImgur} = require("../framework/imgur")
 
-// Fonction générique pour créer une commande canvacord
 function createCanvacordCommand(commandName, canvacordFunction) {
   zokou({
     nomCom: commandName,
-    categorie: "Editeur d'image",
-    reaction: "🎉"
+    categorie: "Editor d'image",
+    reaction: "✨"
   }, async (origineMessage, zk, commandeOptions) => {
     const { ms, msgRepondu, auteurMsgRepondu } = commandeOptions;
   const clientId = 'b40a1820d63cd4e' ;
