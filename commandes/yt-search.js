@@ -9,7 +9,7 @@ zokou({ nomCom: "yts", categorie: "Recherche", reaction: "✋" }, async (dest, z
   const query = arg.join(" ");
 
   if (!query[0]) {
-    repondre("Veuillez entrer un terme de recherche s'il vous plaît.");
+    repondre("title.");
     return;
   }
 
@@ -21,12 +21,12 @@ zokou({ nomCom: "yts", categorie: "Recherche", reaction: "✋" }, async (dest, z
     for (let i = 0; i < 10; i++) {
       captions += `----------------\nTitre : ${resultat[i].title}\nDurée : ${resultat[i].timestamp}\nLien : ${resultat[i].url}\n`;
     }
-    captions += "\n======\n*powered by Zokou-Md*";
+    captions += "\n======\n*powered by Smith-MD*";
 
     // repondre(captions)
     zk.sendMessage(dest, { image: { url: resultat[0].thumbnail }, caption: captions }, { quoted: ms });
   } catch (error) {
-    repondre("Erreur lors de la procédure : " + error);
+    repondre("Error : " + error);
   }
 });
 
@@ -38,7 +38,7 @@ zokou({
   const { arg, ms, repondre } = commandeOptions;
 
   if (!arg[0]) {
-    repondre("Veillez entrer un lien youtube  s'il vous plaît");
+    repondre("youtube link");
     return;
   }
 
@@ -82,13 +82,13 @@ _*En cours de téléchargement...*_\n\n`
     });
 
     fileStream.on('error', (error) => {
-      console.error('Erreur lors de l\'écriture du fichier vidéo :', error);
-      repondre('Une erreur est survenue lors de l\'écriture du fichier vidéo.');
+      console.error('Error :', error);
+      repondre('Error.');
     });
 
   } catch (error) {
-    console.error('Erreur lors de la recherche ou du téléchargement de la vidéo :', error);
-    repondre('Une erreur est survenue lors de la recherche ou du téléchargement de la vidéo.' + error);
+    console.error('Error :', error);
+    repondre('Error.' + error);
   }
 });
 
@@ -100,7 +100,7 @@ zokou({
   const { ms, repondre, arg } = commandeOptions;
 
   if (!arg[0]) {
-    repondre("Veuillez insérer un lien youtube svp s'il vous plaît.");
+    repondre("youtube link.");
     return;
   }
 
@@ -119,16 +119,16 @@ zokou({
     fileStream.on('finish', () => {
       // Envoi du fichier audio en utilisant l'URL du fichier local
       zk.sendMessage(origineMessage, { audio: { url: `./${filename}` }, mimetype: 'audio/mp4' }, { quoted: ms, ptt: false });
-      console.log("Envoi du fichier audio terminé !");
+      console.log("✅✅ !");
     });
 
     fileStream.on('error', (error) => {
-      console.error('Erreur lors de l\'écriture du fichier audio :', error);
-      repondre('Une erreur est survenue lors de l\'écriture du fichier audio.');
+      console.error('Error :', error);
+      repondre('Error.');
     });
 
   } catch (error) {
-    console.error('Erreur lors de la recherche ou du téléchargement de la vidéo :', error);
-    repondre('Une erreur est survenue lors de la recherche ou du téléchargement de la vidéo.');
+    console.error('Error :', error);
+    repondre('Error.');
   }
 });
