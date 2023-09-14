@@ -37,15 +37,14 @@ zokou({ nomCom: "menu", categorie: "Général" }, async (dest, zk, commandeOptio
 ║    Date : ${date}
 ║    Heure : ${temps}
 ║    Mémoire : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-║    Plateforme : ${os.platform()}
-║ 
+║    Plateforme : ${os.platform()} 
 ╚════--------------- \n\n`;
     
     let menuMsg = `
 👋 Hi brother ${nomAuteurMessage} 🥰🥰
 I"am *${s.NOM_BOT}*,
 My préfixe : ${prefixe}
-**Voici la liste de mes commandes :**
+**liste commande :**
 `;
 
     for (const cat in coms) {
@@ -61,10 +60,10 @@ My préfixe : ${prefixe}
     var link = s.IMAGE_MENU;
 
     try {
-        zk.sendMessage(dest, { image: { url: link }, caption:infoMsg + menuMsg, footer: "Je suis *Zokou-MD*, développé par Djalega++" }, { quoted: ms });
+        zk.sendMessage(dest, { image: { url: link }, caption:infoMsg + menuMsg, footer: "Hi I'am *Smith-MD*" }, { quoted: ms });
     }
     catch (e) {
-        console.log("🥵🥵 Menu erreur " + e);
-        repondre("🥵🥵 Menu erreur " + e);
+        console.log("🥵🥵 Menu error " + e);
+        repondre("🥵🥵 Menu error " + e);
     }
 });
