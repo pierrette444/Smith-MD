@@ -8,7 +8,7 @@ const filename = `${Math.random().toString(36)}`;
 zokou (
     {
         nomCom : 'deep',
-        categorie : 'Editeur-audio',
+        categorie : 'Editor-audio',
 
     }, async (dest , zk, commandeOptions) => {
         const {ms , repondre,msgRepondu} = commandeOptions;
@@ -24,7 +24,7 @@ zokou (
                 try {
                   exec(`ffmpeg -i ${media} ${set} ${ran}`, (err, stderr, stdout) => {
                     fs.unlinkSync(media);
-                    if (err) return repondre("erreur lors de la procedure " + err );
+                    if (err) return repondre("error " + err );
                    
                     let buff1 = fs.readFileSync(ran);
                    
@@ -41,11 +41,11 @@ zokou (
                 }
 
             } else {
-                repondre('la commande ne marche qu\'avec des messages audio')
+                repondre('audio commande ')
             }
 
         } else {
-            repondre('Veillez mentionner un audio svp')
+            repondre('mention audio')
         }
     }
 );
@@ -53,7 +53,7 @@ zokou (
 zokou (
     {
         nomCom : 'bass',
-        categorie : 'Editeur-audio',
+        categorie : 'Editor-audio',
 
     }, async (dest , zk, commandeOptions) => {
         const {ms , repondre,msgRepondu} = commandeOptions;
@@ -86,11 +86,11 @@ zokou (
                 }
 
             } else {
-                repondre('la commande ne marche qu\'avec des messages audio')
+                repondre('audio commande ')
             }
 
         } else {
-            repondre('Veillez mentionner un audio svp')
+            repondre('select audio ')
         }
     }
 );
@@ -98,7 +98,7 @@ zokou (
 zokou(
     {
       nomCom: 'reverse',
-      categorie: 'Editeur-audio',
+      categorie: 'Editor-audio',
     },
     async (dest, zk, commandeOptions) => {
       const { ms, repondre, msgRepondu } = commandeOptions;
@@ -123,10 +123,10 @@ zokou(
             repondre("Erreur : " + e);
           }
         } else {
-          repondre("La commande ne marche qu'avec des messages audio");
+          repondre("audio commande");
         }
       } else {
-        repondre("Veuillez mentionner un audio svp");
+        repondre("audio mention");
       }
     }
   );
@@ -134,7 +134,7 @@ zokou(
   zokou(
     {
       nomCom: 'slow',
-      categorie: 'Editeur-audio',
+      categorie: 'Editor-audio',
     },
     async (dest, zk, commandeOptions) => {
       const { ms, repondre, msgRepondu } = commandeOptions;
@@ -148,7 +148,7 @@ zokou(
           try {
             exec(`ffmpeg -i ${media5} ${set5} ${ran5}`, (err, stderr, stdout) => {
               fs.unlinkSync(media5);
-              if (err) return repondre("Erreur lors de la procédure " + err);
+              if (err) return repondre("Error" + err);
   
               let buff5 = fs.readFileSync(ran5);
   
@@ -159,10 +159,10 @@ zokou(
             repondre("Erreur : " + e);
           }
         } else {
-          repondre("La commande ne marche qu'avec des messages audio");
+          repondre("commande audio");
         }
       } else {
-        repondre("Veuillez mentionner un audio svp");
+        repondre("mention audio");
       }
     }
   );
@@ -196,19 +196,19 @@ zokou(
             repondre("Erreur : " + e);
           }
         } else {
-          repondre("La commande ne marche qu'avec des audios");
+          repondre("audio commande");
         }
       } else {
-        repondre("Veuillez mentionner un audio svp");
+        repondre("mention audio");
       }
     }
   );
   
-  // Cas pour l'effet "tempo"
+  // Hi "tempo"
   zokou(
     {
       nomCom: 'tempo',
-      categorie: 'Editeur-audio',
+      categorie: 'Editor-audio',
     },
     async (dest, zk, commandeOptions) => {
       const { ms, repondre, msgRepondu } = commandeOptions;
@@ -230,22 +230,22 @@ zokou(
               fs.unlinkSync(ranTempo);
             });
           } catch (e) {
-            repondre("Erreur : " + e);
+            repondre("Error : " + e);
           }
         } else {
-          repondre("La commande ne marche qu'avec des messages audio");
+          repondre("audio commande");
         }
       } else {
-        repondre("Veuillez mentionner un audio svp");
+        repondre("mention audio");
       }
     }
   );
   
-  // Cas pour l'effet "nightcore"
+  // Hi "nightcore"
   zokou(
     {
       nomCom: 'nightcore',
-      categorie: 'Editeur-audio',
+      categorie: 'Editor-audio',
     },
     async (dest, zk, commandeOptions) => {
       const { ms, repondre, msgRepondu } = commandeOptions;
@@ -259,7 +259,7 @@ zokou(
           try {
             exec(`ffmpeg -i ${mediaNightcore} ${setNightcore} ${ranNightcore}`, (err, stderr, stdout) => {
               fs.unlinkSync(mediaNightcore);
-              if (err) return repondre("Erreur lors de la procédure " + err);
+              if (err) return repondre("Error " + err);
   
               let buff8 = fs.readFileSync(ranNightcore);
   
@@ -267,13 +267,13 @@ zokou(
               fs.unlinkSync(ranNightcore);
             });
           } catch (e) {
-            repondre("Erreur : " + e);
+            repondre("Error : " + e);
           }
         } else {
-          repondre("La commande ne marche qu'avec des messages audio");
+          repondre("audio commande ");
         }
       } else {
-        repondre("Veuillez mentionner un audio svp");
+        repondre("mention audio");
       }
     }
   );
