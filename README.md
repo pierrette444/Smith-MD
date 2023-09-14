@@ -20,7 +20,7 @@
 # ```SCANNE QR CODE```
 ⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️
  *click here to be able to have the bot session*
- [{✨**Session-ID✨**}](https://replit.com/@Smith2023/BUTTER-QUEEN-MD) <br>
+ [![✨**Session-ID✨**](https://replit.com/@Smith2023/BUTTER-QUEEN-MD) <br>
  
 
 ## ```Déploiement Method```
@@ -41,6 +41,6 @@
 
 ## ```✨A BIG THANKS YOU TO✨```⬇️⬇️⬇️
   
-  [✨**➳ᴹᴿ᭄𝐃𝐞𝐧𝐳𝐨 𝐔𝐜𝐡𝐢𝐰𝐚 亗**✨](https://github.com/Denzo-MD)
+  [✨**ᴿ᭄𝐃𝐞𝐧𝐳𝐨 𝐔𝐜𝐡𝐢𝐰𝐚 亗**✨](https://github.com/Denzo-MD)
 
  
