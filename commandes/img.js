@@ -3,14 +3,14 @@ const gis = require('async-g-i-s');
 
 zokou({
   nomCom: "img",
-  categorie: "Recherche",
+  categorie: "Download",
   reaction: "📷"
 },
 async (dest, zk, commandeOptions) => {
   const { repondre, ms, arg } = commandeOptions;
 
   if (!arg[0]) {
-    repondre('Veuillez fournir un terme de recherche pour les images !');
+    repondre('name image please !');
     return;
   }
 
@@ -24,7 +24,7 @@ async (dest, zk, commandeOptions) => {
       zk.sendMessage(dest, { image: { url: results[i].url } }, { quoted: ms });
     }
   } catch (error) {
-    console.error('Erreur lors de la recherche d\'images :', error);
-    repondre('Erreur lors de la recherche d\'images.',error);
+    console.error('Error images :', error);
+    repondre('Error images.',error);
   }
 });
