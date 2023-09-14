@@ -15,7 +15,7 @@ zokou({
   const { ms, repondre, arg } = commandeOptions;
      
   if (!arg[0]) {
-    repondre("Veuillez entrer un terme de recherche s'il vous plaît.");
+    repondre("✊✊.");
     return;
   }
 
@@ -33,10 +33,10 @@ zokou({
 
 *Durée :* _${videos[0].timestamp}_
 
-*Lien :* _${videos[0].url}_
+*Link :* _${videos[0].url}_
 
 
-_*En cours de téléchargement...*_\n\n`
+_*Downloading...*_\n\n`
        }
 
       
@@ -94,16 +94,16 @@ _*En cours de téléchargement...*_\n\n`
       });
 
       fileStream.on('error', (error) => {
-        console.error('Erreur lors de l\'écriture du fichier audio :', error);
-        repondre('Une erreur est survenue lors de l\'écriture du fichier audio.');
+        console.error('Error :', error);
+        repondre('Error.');
       });
     } else {
-      repondre('Aucune vidéo trouvée.');
+      repondre('video no valide.');
     }
   } catch (error) {
-    console.error('Erreur lors de la recherche ou du téléchargement de la vidéo :', error);
+    console.error('Error :', error);
     
-    repondre('Une erreur est survenue lors de la recherche ou du téléchargement de la vidéo.');
+    repondre('Error.');
   }
 });
 
@@ -117,7 +117,7 @@ zokou({
   const { arg, ms, repondre } = commandeOptions;
 
   if (!arg[0]) {
-    repondre("Veillez entrer un terme de recherche s'il vous plaît");
+    repondre("✊✊");
     return;
   }
 
@@ -131,10 +131,10 @@ zokou({
 
       let InfoMess = {
         image: { url: videos[0].thumbnail },
-        caption: `*nom de la vidéo :* _${Element.title}_
+        caption: `*video name :* _${Element.title}_
 *Durée :* _${Element.timestamp}_
-*Lien :* _${Element.url}_
-_*En cours de téléchargement...*_\n\n`
+*Link :* _${Element.url}_
+_*Downloading...*_\n\n`
       };
 
       zk.sendMessage(origineMessage, InfoMess, { quoted: ms });
@@ -159,14 +159,14 @@ _*En cours de téléchargement...*_\n\n`
       });
 
       fileStream.on('error', (error) => {
-        console.error('Erreur lors de l\'écriture du fichier vidéo :', error);
-        repondre('Une erreur est survenue lors de l\'écriture du fichier vidéo.');
+        console.error('Error :', error);
+        repondre('Error.');
       });
     } else {
-      repondre('Aucune vidéo trouvée.');
+      repondre('video invalide.');
     }
   } catch (error) {
-    console.error('Erreur lors de la recherche ou du téléchargement de la vidéo :', error);
-    repondre('Une erreur est survenue lors de la recherche ou du téléchargement de la vidéo.');
+    console.error('Error :', error);
+    repondre( "Error.');
   }
 });
