@@ -7,12 +7,12 @@ const { writeFile } = require('fs/promises')
 zokou({
   nomCom: "waifu",
   categorie: "Weeb",
-  reaction: "😏"
+  reaction: "💻"
 },
 async (origineMessage, zk, commandeOptions) => {
   const { repondre, ms } = commandeOptions;
 
-  const url = 'https://api.waifu.pics/sfw/waifu'; // Remplacez avec le lien réel de l'API waifu.pics
+  const url = 'https://api.waifu.pics/sfw/waifu'; // API waifu.pics
 
   try {
     
@@ -23,7 +23,7 @@ async (origineMessage, zk, commandeOptions) => {
       zk.sendMessage(origineMessage, { image: { url: imageUrl } }, { quoted: ms });
     }
   } catch (error) {
-    repondre('Erreur lors de la récupération des données :', error);
+    repondre('Error :', error);
   }
 });
 
@@ -36,7 +36,7 @@ zokou({
 async (origineMessage, zk, commandeOptions) => {
   const { repondre, ms } = commandeOptions;
 
-  const url = 'https://api.waifu.pics/sfw/neko'; // Remplacez avec le lien réel de l'API waifu.pics ou une autre API de nekos
+  const url = 'https://api.waifu.pics/sfw/neko'; // API waifu.pics 
 
   try {
     for (let i = 0; i < 5; i++) {
@@ -46,7 +46,7 @@ async (origineMessage, zk, commandeOptions) => {
       zk.sendMessage(origineMessage, { image: { url: imageUrl } }, { quoted: ms });
     }
   } catch (error) {
-    repondre('Erreur lors de la récupération des données :', error);
+    repondre('Error :', error);
   }
 });
 
@@ -59,7 +59,7 @@ zokou({
 async (origineMessage, zk, commandeOptions) => {
   const { repondre, ms } = commandeOptions;
 
-  const url = 'https://api.waifu.pics/sfw/shinobu'; // Remplacez avec le lien réel de l'API waifu.pics ou une autre API avec des images de Shinobu
+  const url = 'https://api.waifu.pics/sfw/shinobu'; // API waifu.pics
 
   try {
     for (let i = 0; i < 5; i++) {
@@ -69,7 +69,7 @@ async (origineMessage, zk, commandeOptions) => {
       zk.sendMessage(origineMessage, { image: { url: imageUrl } }, { quoted: ms });
     }
   } catch (error) {
-    repondre('Erreur lors de la récupération des données :', error);
+    repondre('Error :', error);
   }
 });
 
@@ -82,7 +82,7 @@ zokou({
 async (origineMessage, zk, commandeOptions) => {
   const { repondre, ms } = commandeOptions;
 
-  const url = 'https://api.waifu.pics/sfw/megumin'; // Remplacez avec le lien réel de l'API waifu.pics ou une autre API avec des images de Megumin
+  const url = 'https://api.waifu.pics/sfw/megumin'; // API waifu.pics
 
   try {
     for (let i = 0; i < 5; i++) {
@@ -92,7 +92,7 @@ async (origineMessage, zk, commandeOptions) => {
       zk.sendMessage(origineMessage,{ image: { url: imageUrl } }, { quoted: ms });
     }
   } catch (error) {
-    repondre('Erreur lors de la récupération des données :', error);
+    repondre('Error :', error);
   }
 });
 
@@ -130,7 +130,7 @@ async (origineMessage, zk, commandeOptions) => {
 zokou({nomCom:"couplepp",categorie: "Weeb",reaction : "💞"},async(dest,zk,commandeOptions)=>{ const {repondre , ms} = commandeOptions;
     let api = 'https://smiling-hosiery-bear.cyclic.app/weeb/couplepp'
   try {
-     repondre('apres c\'est pour prendre goumin')
+     repondre('✍️✍️')
  const result = await axios.get(api)
   
 
