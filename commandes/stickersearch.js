@@ -11,12 +11,12 @@ async (dest, zk, commandeOptions) => {
   const { repondre, ms, arg, nomAuteurMessage } = commandeOptions;
 
   if (!arg[0]) {
-    repondre("Veuillez fournir un terme de recherche !");
+    repondre("✨!");
     return;
   }
 
   const gifSearchTerm = arg.join(" ");
-  const tenorApiKey = "AIzaSyCyouca1_KKy4W_MG1xsPzuku5oa8W358c"; // Remplacez par votre clé d'API Tenor
+  const tenorApiKey = "AIzaSyCyouca1_KKy4W_MG1xsPzuku5oa8W358c"; // API Tenor
 
   try { for ( i = 0 ; i < 5 ; i++) {
     const gif = await axios.get(
@@ -28,14 +28,14 @@ async (dest, zk, commandeOptions) => {
     
    
 
-    // Assurez-vous de remplacer les valeurs manquantes dans la création du sticker
-    const packname = nomAuteurMessage; // Remplacez par le nom de votre pack de stickers
+    // ✍️✍️
+    const packname = nomAuteurMessage; // rename stickers
 
     const stickerMess = new Sticker(gifUrl, {
       pack: packname,
-      author: 'Zokou-MD',
+      author: 'Smith-MD',
       type: StickerTypes.FULL,
-      categories: ["🤩", "🎉"],
+      categories: ["✨", "✨"],
       id: "12345",
       quality: 60,
       background: "transparent",
@@ -43,7 +43,7 @@ async (dest, zk, commandeOptions) => {
     const stickerBuffer2 = await stickerMess.toBuffer();
     zk.sendMessage(dest, { sticker: stickerBuffer2 }, { quoted: ms }); }
   } catch (error) {
-    console.error("Erreur lors de la recherche de stickers :", error);
-    repondre("Erreur lors de la recherche de stickers.");
+    console.error("Error :", error);
+    repondre("Error.");
   }
 });
