@@ -5,20 +5,20 @@ const { fetchVideo } = require('@prevter/tiktok-scraper');
 const mumaker = require("mumaker");
 const getFBInfo = require("@xaviabot/fb-downloader");
 
-zokou({nomCom : "igdl" , categorie : "Téléchargement"},async (dest , zk , commandeOptions)=>{
+zokou({nomCom : "igdl" , categorie : "Download"},async (dest , zk , commandeOptions)=>{
   const {ms,repondre,arg} = commandeOptions ;
 
   let link = arg.join(' ')
 
-  if (!arg[0]) { repondre('Veillez insérer un lien video instagramme');return}; 
+  if (!arg[0]) { repondre('link please');return}; 
 
   try {
      const response = await mumaker.instagram(link)
   
   let choix = response[0]
 
-    zk.sendMessage(dest,{video : {url : choix},caption : "téléchargeur de video ig propulsé par *Zokou-Md*",gifPlayback : false },{quoted : ms}) 
-  } catch (e) {repondre("erreur survenue lors du téléchargement \n " + e)}
+    zk.sendMessage(dest,{video : {url : choix},caption : "*Smith-MD* Downloading",gifPlayback : false },{quoted : ms}) 
+  } catch (e) {repondre("error \n " + e)}
 
   
 
@@ -27,15 +27,15 @@ zokou({nomCom : "igdl" , categorie : "Téléchargement"},async (dest , zk , comm
 
 
 zokou({
-  nomCom: "fbdl",
-  categorie: "Téléchargement",
+  nomCom: "fb,insta,tiktok",
+  categorie: "Download",
   reaction: "📽️"
 },
 async (dest, zk, commandeOptions) => {
   const { repondre, ms, arg } = commandeOptions;
 
   if (!arg[0]) {
-    repondre('Veuillez fournir une URL vidéo publique de Facebook à télécharger !');
+    repondre('Link please !');
     return;
   }
 
@@ -49,7 +49,7 @@ async (dest, zk, commandeOptions) => {
         Lien: ${result.url}
       `;
        zk.sendMessage(dest,{image : { url : result.thumbnail}, caption : caption},{quoted : ms}) ;
-       zk.sendMessage(dest, { video: { url: result.hd  }, caption: 'Téléchargeur de vidéo Facebook, propulsé par *zokou-MD*' }, { quoted: ms });
+       zk.sendMessage(dest, { video: { url: result.hd  }, caption: '*Smith-MD*Downloading' }, { quoted: ms });
       
     })
     .catch((error) => {console.log("Error:", error)
@@ -58,17 +58,17 @@ async (dest, zk, commandeOptions) => {
 
    
   } catch (error) {
-    console.error('Erreur lors du téléchargement de la vidéo :', error);
-    repondre('Erreur lors du téléchargement de la vidéo.' , error);
+    console.error('Error :', error);
+    repondre('Error.' , error);
   }
 });
 
 
 
-zokou({ nomCom: "tiktok", categorie: "Téléchargement", reaction: "🎵" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "tiktok", categorie: "Downloading", reaction: "▶️" }, async (dest, zk, commandeOptions) => {
   const { arg, ms, prefixe,repondre } = commandeOptions;
   if (!arg[0]) {
-    repondre(`Voici comment utiliser la commande:\n ${prefixe}veiller lien_video_tiktok`);
+    repondre(`commande use:\n ${prefixe}Link please`);
     return;
   }
 
@@ -84,13 +84,13 @@ zokou({ nomCom: "tiktok", categorie: "Téléchargement", reaction: "🎵" }, asy
       const comment = data.comment;
       const share = data.share;
 
-      // Envoi du message avec le thumbnail de la vidéo
+      // ✨✨⭐
       const caption = `
-        Auteur: ${author}
+        Autor: ${author}
         Description: ${description}
         Média: ${media}
         Musique: ${music}
-        J'aime: ${like}
+        like: ${like}
         Commentaire: ${comment}
         Partages: ${share}
       `;
@@ -98,27 +98,27 @@ zokou({ nomCom: "tiktok", categorie: "Téléchargement", reaction: "🎵" }, asy
       
       zk.sendMessage(dest, { image: { url: thumbnail }, caption: caption},{quoted : ms});
 
-      // Envoi de la vidéo sans commentaire
+      // ✨⭐✨✊
       zk.sendMessage(dest, { video: { url: data.media } });
 
-      // Envoi des autres informations
+      // ✨⭐✨
       
     })
     .catch((err) => {
-      console.error("Une erreur s'est produite :", err);
+      console.error("Error :", err);
     });
 });
 
 zokou({
   nomCom: "fbdl2",
-  categorie: "Téléchargement",
+  categorie: "Downloading",
   reaction: "📽️"
 },
 async (dest, zk, commandeOptions) => {
   const { repondre, ms, arg } = commandeOptions;
 
   if (!arg[0]) {
-    repondre('Veuillez fournir une URL vidéo publique de Facebook à télécharger !');
+    repondre('Link please!');
     return;
   }
 
@@ -132,7 +132,7 @@ async (dest, zk, commandeOptions) => {
         Lien: ${result.url}
       `;
        zk.sendMessage(dest,{image : { url : result.thumbnail}, caption : caption},{quoted : ms}) ;
-       zk.sendMessage(dest, { video: { url: result.sd  }, caption: 'Téléchargeur de vidéo Facebook, propulsé par *zokou-MD*' }, { quoted: ms });
+       zk.sendMessage(dest, { video: { url: result.sd  }, caption: '*Smith-MD* Downloading' }, { quoted: ms });
       
     })
     .catch((error) => {console.log("Error:", error)
@@ -141,7 +141,7 @@ async (dest, zk, commandeOptions) => {
 
    
   } catch (error) {
-    console.error('Erreur lors du téléchargement de la vidéo :', error);
-    repondre('Erreur lors du téléchargement de la vidéo.' , error);
+    console.error('Error:', error);
+    repondre('Error link.' , error);
   }
 });
