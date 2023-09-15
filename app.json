@@ -48,9 +48,9 @@
     "NOM_OWNER":
     {
     
-    "desc": "Le nom du propriétaire",
+    "desc": "name owner",
     "required": false,
-    "value": "Zokou-2.0"
+    "value": "Smith-MD"
   },
     "NUMERO_OWNER":
   {
