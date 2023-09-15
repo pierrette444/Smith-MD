@@ -20,7 +20,7 @@ const creerTableAntibot=async ()=>
     
 await pool.query("CREATE TABLE IF NOT EXISTS antibot(groupeJid text PRIMARY KEY,etat text default false);")
 
-  }catch(e){console.log("oups une erreur est survenue lors de la création de la table antibot "+e)}
+  }catch(e){console.log("Error "+e)}
 }
 
 
@@ -36,7 +36,7 @@ module.exports.getAntibot=async(groupeJid)=>
            return resultat.rows;
          }
          else{return [];}
-       }catch(erreur ){console.log("Une erreur s'est produite lors de la récupération de la table antibot "+erreur);}
+       }catch(erreur ){console.log("Error "+erreur);}
   }
 
 
